@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: com.mb00mer.tasks.cartask.Solution
+Class-Path: db/h2-1.4.196.jar; db/Cars_DB.trace.db; db/Cars_DB.mv.db

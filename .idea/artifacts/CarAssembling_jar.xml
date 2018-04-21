@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CarAssembling:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CarAssembling_jar</output-path>
+    <root id="archive" name="CarAssembling.jar">
+      <element id="module-output" name="CarAssembling" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/db/h2-1.4.196.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

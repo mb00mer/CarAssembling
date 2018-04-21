@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mb00mer.tasks.cartask.controller.PartsOverviewController">
+   <children>
+      <BorderPane fx:id="borderPane" layoutX="92.0" layoutY="36.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <ToolBar fx:id="editToolBar" prefHeight="17.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleAddPart" text="Добавить">
+                     <tooltip>
+                        <Tooltip text="Добавить новую деталь в справочник" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleEditPart" text="Редактировать">
+                     <tooltip>
+                        <Tooltip text="Редактировать параметры детали" />
+                     </tooltip>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleDeletePart" text="Удалить">
+                     <tooltip>
+                        <Tooltip text="Удалить деталь из справочника" />
+                     </tooltip></Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleAddSubPart" text="Добавить в состав">
+                     <tooltip>
+                        <Tooltip text="Добавить деталь в состав" />
+                     </tooltip></Button>
+              </items>
+            </ToolBar>
+         </top>
+         <bottom>
+            <ButtonBar fx:id="chooseToolBar" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" text="ОК" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Отмена" />
+              </buttons>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </ButtonBar>
+         </bottom>
+         <center>
+            <TreeTableView fx:id="partTreeTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <columns>
+                    <TreeTableColumn fx:id="idPartColumn" prefWidth="47.0" text="Id детали" />
+                    <TreeTableColumn fx:id="namePartColumn" prefWidth="119.0" text="Название детали" />
+                    <TreeTableColumn fx:id="countPartColumn" prefWidth="119.0" text="Количество" />
+                    <TreeTableColumn fx:id="colorPartColumn" prefWidth="64.0" text="Цвет" />
+                    <TreeTableColumn fx:id="materialPartColumn" prefWidth="108.0" text="Материал" />
+                    <TreeTableColumn fx:id="sizePartColumn" prefWidth="58.0" text="Размер" />
+                </columns>
+                <columnResizePolicy>
+                    <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>            </TreeTableView>
+         </center></BorderPane>
+   </children>
+</AnchorPane>
